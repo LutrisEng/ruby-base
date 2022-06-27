@@ -12,6 +12,7 @@ on:
 jobs:
   ruby:
     strategy:
+      fail-fast: false
       matrix:
         flavor: [bullseye, bookworm]
         ruby_version: ["3.1.2", "3.0.4"]
