@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        flavor: [bullseye, bookworm]
+        flavor: [bullseye]
         ruby_version: ["3.1.2", "3.0.4"]
     name: Ruby ${{ matrix.ruby_version }} on Debian ${{ matrix.flavor }}
     runs-on: ubuntu-22.04
