@@ -18,7 +18,7 @@ jobs:
     name: Ruby ${{ matrix.ruby_version }} on Debian ${{ matrix.flavor }}
     runs-on: ubuntu-22.04
     concurrency:
-      group: "docker_${{ github.event_name == 'pull_request' && format('pr_{0}', github.event.number) || format('ref_{0}', github.ref) }}"
+      group: "docker_${{ matrix.ruby_version }}_${{ matrix.flavor }}_${{ github.event_name == 'pull_request' && format('pr_{0}', github.event.number) || format('ref_{0}', github.ref) }}"
       cancel-in-progress: ${{ github.event_name == 'pull_request' }}
     steps:
       - name: Checkout code
