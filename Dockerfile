@@ -8,7 +8,7 @@ COPY imagedate.txt /
 
 ARG RBENV_VERSION=1.2.0
 RUN git clone --depth 1 --branch v${RBENV_VERSION} https://github.com/rbenv/rbenv.git /opt/rbenv
-ENV PATH="/opt/rbenv/bin:$PATH"
+ENV PATH="/opt/rbenv/bin:/opt/rbenv/shims:$PATH"
 ENV RBENV_ROOT=/opt/rbenv
 RUN mkdir -p "$(rbenv root)"/plugins
 ARG RUBY_BUILD_VERSION=20220610
