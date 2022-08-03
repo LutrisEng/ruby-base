@@ -1,6 +1,6 @@
 # syntax = docker/dockerfile:experimental
 ARG FLAVOR=bullseye
-ARG DEBIAN_BASE_TAG=sha-e8e6f7512fdb9c3f17367622d2b130c912a1d5bf
+ARG DEBIAN_BASE_TAG=sha-3f799756e262559d2fb9b5550c559c751e63b9c9
 
 FROM ghcr.io/lutriseng/debian-base/${FLAVOR}:${DEBIAN_BASE_TAG} AS ruby-base
 
