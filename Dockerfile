@@ -11,7 +11,7 @@ RUN git clone --depth 1 --branch v${RBENV_VERSION} https://github.com/rbenv/rben
 ENV PATH="/opt/rbenv/bin:/opt/rbenv/shims:$PATH"
 ENV RBENV_ROOT=/opt/rbenv
 RUN mkdir -p "$(rbenv root)"/plugins
-ARG RUBY_BUILD_VERSION=20220610
+ARG RUBY_BUILD_VERSION=20220726
 RUN git clone --depth 1 --branch v${RUBY_BUILD_VERSION} https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 
 ARG RUBY_VERSION=3.1.2
